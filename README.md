@@ -12,6 +12,8 @@ Blackjack game that I made as a schoolproject for Chasacademy, teacher David Sho
 
 ### GitHub repo: :point_down:
 
+https://github.com/ChasAcademy-Linnea-Svensson/Blackjack
+
 ### Deployed here: :point_down:
 
 ### Future plans:

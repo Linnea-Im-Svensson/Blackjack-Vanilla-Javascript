@@ -58,7 +58,7 @@ function fillDrawPile(arrayC) {
 
   arrayC.forEach((card) => {
     newCardArray.push(`
-      <div class="card card-back ${card.num}" style="background: url('./images/${card.file}') no-repeat center center/cover; background-origin: content-box;"></div>
+      <div class="card card-back ${card.num}" style="background: url('./img/${card.file}') no-repeat center center/cover; background-origin: content-box;"></div>
     `);
   });
 
@@ -423,7 +423,7 @@ function createAndFillChips() {
     cpuChips = [];
     for (let i = 10; i > 0; i--) {
       cpuChips.push(`
-      <img src="./images/chip.png" style="transform: translate(${position}, ${
+      <img src="./img/chip.png" style="transform: translate(${position}, ${
         i * 7
       }px)" /></div>
     `);
@@ -438,7 +438,7 @@ function createAndFillChips() {
     playerChips = [];
     for (let i = 10; i > 0; i--) {
       playerChips.push(`
-      <img src="./images/chip.png" style="transform: translate(${position}, ${
+      <img src="./img/chip.png" style="transform: translate(${position}, ${
         i * 7
       }px)" /></div>
     `);
