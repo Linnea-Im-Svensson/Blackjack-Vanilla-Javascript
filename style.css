@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --title-color: #0c5327;
+  --btn-color: #372b25;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('./images/wooden-texture.jpg') no-repeat center center/cover;
+}
+
+.menu-container {
+  height: 600px;
+  width: 400px;
+  background: url('./images/menu.jpg') no-repeat center center/cover;
+  padding: 3rem 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  overflow: hidden;
+  border: #372b25 solid 5px;
+  box-shadow: #000 5px 5px 5px;
+}
+
+.menu-container h1 {
+  text-shadow: #cd9c4e 3px 3px 3px;
+  font-size: 4rem;
+  color: var(--title-color);
+}
+
+.btn {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--btn-color);
+  color: #fff;
+  box-shadow: #000 3px 3px 3px;
+}
+
+.btn-small {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background: var(--btn-color);
+  color: #fff;
+  box-shadow: #000 3px 3px 3px;
+}
+
+.btn:active {
+  transform: scale(0.8);
+}
+
+.btn-front {
+  background: var(--title-color);
+  box-shadow: #cd9c4e 3px 3px 3px;
+  color: #cd9c4e;
+}
+
+#bet1 {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 6.5rem;
+}
+
+#bet2 {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+.bet-area {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 11rem;
+  height: 10rem;
+  width: 5rem;
+}
+
+.game-container {
+  height: 600px;
+  width: 850px;
+  background: url('./images/board.jpg') no-repeat center center/cover;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  border: #372b25 solid 5px;
+  box-shadow: #000 5px 5px 5px;
+}
+
+.game-container .card-area {
+  height: 170px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.game-container #cpu {
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.game-container #player {
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.result-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.result-container .result {
+  width: 50rem;
+  text-align: center;
+}
+
+.result span {
+  display: inline-block;
+  color: #fff200;
+  text-shadow: #413705 3px 3px 3px;
+  font-size: 4rem;
+}
+
+.pile {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  margin: 2.5rem 1.5rem;
+}
+
+#draw-pile {
+  top: 0;
+}
+
+#discard-pile {
+  bottom: 2.5rem;
+}
+
+.button-container {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  height: 180px;
+  width: 120px;
+  padding: 1rem;
+  margin-right: 1rem;
+  padding: 3px;
+  transition: transform 0.5s ease;
+}
+
+.card-back {
+  background: url('./images/card-back.jpg') no-repeat center center/cover !important;
+  border-radius: 10px;
+  border: #333 solid 1px;
+}
+
+.player-score {
+  color: #fff;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cpu-score {
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.chip-area-cpu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 10rem;
+  width: 20rem;
+}
+
+.chip-area-player {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  height: 10rem;
+  width: 18rem;
+}
+
+.chip-area-cpu img,
+.chip-area-player img,
+.bet-area img {
+  position: absolute;
+  bottom: 6.5rem;
+  right: 1rem;
+  width: 3rem;
+  height: auto;
+}
+
+.chip-area-player img {
+  bottom: 8rem;
+}
+
+.bet-area img {
+  right: -1rem;
+  top: 6rem;
+}
+
+#lock-bet {
+  transform: translateX(-1.5rem);
+}
+
+@keyframes drawCpu {
+  0% {
+    transform: translate(-20rem, -2rem);
+  }
+  100% {
+    right: -4.1rem;
+    z-index: 2;
+  }
+}
+
+@keyframes drawPlayer {
+  0% {
+    transform: translate(-21rem, -17rem);
+  }
+  100% {
+    right: -4rem;
+    z-index: 2;
+  }
+}
+
+@keyframes flipCard {
+  to {
+    transform: rotateY(180deg);
+    right: -2.7rem;
+    bottom: 0.95rem;
+    backface-visibility: hidden;
+  }
+}
+
+@keyframes winAnimation {
+  0% {
+    transform: translateY(0);
+    color: #ff7b00;
+  }
+
+  25% {
+    transform: translateY(-2rem);
+    color: #ff00c8;
+  }
+
+  50% {
+    transform: translateY(1rem);
+    color: #7b00ff;
+  }
+
+  100% {
+    transform: translateY(0);
+    color: #1900ff;
+    opacity: 0;
+  }
+}

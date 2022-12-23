@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Blackjack</title>
+  </head>
+
+  <body>
+    <div class="menu-container">
+      <h1>Blackjack</h1>
+      <button class="btn btn-front" id="start-game">Start Game</button>
+    </div>
+    <div class="game-container hide">
+      <div class="pile" id="draw-pile"></div>
+      <div class="pile" id="discard-pile"></div>
+      <div class="card-area" id="cpu"></div>
+      <div class="card-area" id="player"></div>
+      <div class="button-container hide">
+        <button class="btn" id="draw">Draw</button>
+        <button class="btn" id="new-round">New Round</button>
+        <button class="btn" id="stay">Stay</button>
+      </div>
+      <div class="button-container">
+        <button class="btn" id="lock-bet">Bet</button>
+      </div>
+      <div class="result-container">
+        <h3 class="result"></h3>
+      </div>
+      <div class="cpu-score"></div>
+      <div class="player-score"></div>
+      <div class="chip-area-cpu"></div>
+      <div class="chip-area-player"></div>
+      <div class="bet-area"></div>
+      <button class="btn-small" id="bet1">+</button>
+      <button class="btn-small" id="bet2">-</button>
+    </div>
+    <script type="module" src="code.js"></script>
+  </body>
+</html>
