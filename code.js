@@ -107,11 +107,9 @@ function drawCard(toTarget, isTrue) {
 
   //Count and add points
   if (drawPile.childElementCount === 0) {
-    getCards().then((cards) => {
-      fillDrawPile(cards);
-      discardPile.innerHTML = '';
-      discardArray = [];
-    });
+    fillDrawPile(cards);
+    discardPile.innerHTML = '';
+    discardArray = [];
   }
   if (toTarget === player) {
     const points = parseInt(drawnCard.getAttribute('class').split(' ').pop());
@@ -400,11 +398,9 @@ function stackBetChips(stack) {
 //Draws 2 cards for the cpu and player
 function newHands() {
   if (drawPile.childElementCount === 0) {
-    getCards().then((cards) => {
-      fillDrawPile(cards);
-      discardPile.innerHTML = '';
-      discardArray = [];
-    });
+    fillDrawPile(cards);
+    discardPile.innerHTML = '';
+    discardArray = [];
   }
   drawCard(cpu, false);
   drawCard(cpu, false);
