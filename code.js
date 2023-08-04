@@ -21,7 +21,8 @@ const newCards = cards,
   betArea = document.querySelector('.bet-area'),
   lockBetBtn = document.querySelector('#lock-bet'),
   buttonContainer = document.querySelector('.button-container'),
-  resultContainer = document.querySelector('.result-container');
+  resultContainer = document.querySelector('.result-container'),
+  preRenderBox = document.querySelector('#pre-render');
 
 let cardArray = [],
   discardArray = [],
@@ -535,9 +536,16 @@ function transferChips(toTarget) {
   }
 }
 
+function preRenderCards() {
+  cards.forEach((card) => {
+    preRenderBox.innerHTML += `<img src='./img/${card.file}' class='pre-render-card' />`;
+  });
+}
+
 //Creates game
 function newGame() {
   toggleMenu();
+  preRenderCards();
   fillDrawPile(newCards);
   createAndFillChips();
   newHands();

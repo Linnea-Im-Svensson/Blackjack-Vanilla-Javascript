@@ -249,6 +249,18 @@ body {
   transform: translateX(-1.5rem);
 }
 
+#pre-render {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  z-index: -10;
+}
+
+.pre-render-card {
+  height: 1rem;
+  width: 1rem;
+}
+
 @keyframes drawCpu {
   0% {
     transform: translate(-20rem, -2rem);
