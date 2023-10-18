@@ -16,6 +16,8 @@ https://github.com/ChasAcademy-Linnea-Svensson/Blackjack
 
 ### Deployed here: :point_down:
 
+https://blackjack-vanilla-javascript.vercel.app/
+
 ### Future plans:
 
 - [ ] Fix bug: If player bets more chips than the bank currently has.
